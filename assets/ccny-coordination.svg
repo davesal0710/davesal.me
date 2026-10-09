@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 840" role="img" aria-labelledby="title desc">
+<title id="title">CCNY capstone: coordinating three team workstreams</title>
+<desc id="desc">David served as primary project manager, planning work, coordinating tasks, and communicating with stakeholders. Research, prototype work, and presentation design were team contributions. Meetings, stand-ups, and rehearsals supported coordination. This is a conceptual role map, not a project timeline.</desc>
+<defs><pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r="1" fill="#ddd8cf"/></pattern></defs>
+<rect width="900" height="840" fill="#eeeae2"/><rect width="900" height="840" fill="url(#grid)"/>
+<g font-family="Arial, sans-serif">
+<rect x="42" y="40" width="44" height="5" fill="#65518b"/>
+<text x="102" y="50" fill="#635a6f" font-size="16" letter-spacing="2">CCNY / BRAVEN CAPSTONE</text>
+<text x="42" y="110" fill="#25202c" font-size="43" font-weight="600" letter-spacing="-1.5">One challenge. A coordinated team.</text>
+<text x="42" y="148" fill="#68616e" font-size="21">Helping students discover and attend campus events.</text>
+<!-- Coordination connections: no arrows or chronological claims. -->
+<path d="M450 382 V432 M180 480 V432 H720 V480 M450 432 V480" stroke="#8f80a5" stroke-width="2.5" fill="none"/>
+<circle cx="450" cy="432" r="6" fill="#65518b"/>
+<rect x="200" y="206" width="500" height="176" rx="16" fill="#30263f"/>
+<circle cx="248" cy="252" r="19" fill="#bcb0d0"/><text x="248" y="258" text-anchor="middle" fill="#30263f" font-size="14" font-weight="bold">DS</text>
+<text x="285" y="249" fill="#e1d5f0" font-size="15" letter-spacing="1.8">MY ROLE</text>
+<text x="285" y="279" fill="#ffffff" font-size="27" font-weight="600">Primary project manager</text>
+<path d="M230 305 H670" stroke="#665774"/>
+<text x="232" y="335" fill="#e3dce9" font-size="19">Planning · Task coordination</text>
+<text x="232" y="362" fill="#e3dce9" font-size="19">Stakeholder communication</text>
+<!-- Team-owned workstreams. -->
+<g fill="#faf8f4" stroke="#cbc4d0"><rect x="55" y="480" width="250" height="200" rx="12"/><rect x="325" y="480" width="250" height="200" rx="12"/><rect x="595" y="480" width="250" height="200" rx="12"/></g>
+<g fill="#eee8f5"><circle cx="92" cy="520" r="21"/><circle cx="362" cy="520" r="21"/><circle cx="632" cy="520" r="21"/></g>
+<g fill="none" stroke="#65518b" stroke-width="2"><circle cx="89" cy="517" r="8"/><path d="m95 523 7 7"/><rect x="352" y="511" width="20" height="18" rx="2"/><path d="M352 517 H372 M359 517 V529"/><rect x="621" y="511" width="22" height="15" rx="1"/><path d="M632 526 V532 M626 532 H638"/></g>
+<text x="79" y="571" fill="#30263f" font-size="25" font-weight="600">Research</text>
+<text x="79" y="605" fill="#6b6470" font-size="19">Student perspectives</text><text x="79" y="633" fill="#6b6470" font-size="19">&amp; communication gaps</text>
+<text x="349" y="571" fill="#30263f" font-size="25" font-weight="600">Prototype</text>
+<text x="349" y="605" fill="#6b6470" font-size="19">Student-life concepts</text><text x="349" y="633" fill="#6b6470" font-size="19">&amp; recorded feedback</text>
+<text x="619" y="571" fill="#30263f" font-size="25" font-weight="600">Presentation</text>
+<text x="619" y="605" fill="#6b6470" font-size="19">Recommendations</text><text x="619" y="633" fill="#6b6470" font-size="19">&amp; final deck</text>
+<g fill="#8f80a5"><circle cx="180" cy="480" r="4"/><circle cx="450" cy="480" r="4"/><circle cx="720" cy="480" r="4"/></g>
+<text x="450" y="717" text-anchor="middle" fill="#6b6470" font-size="16" letter-spacing="1">TEAM WORKSTREAMS · SHARED CONTRIBUTIONS</text>
+<path d="M42 747 H858" stroke="#ccc5d1"/>
+<text x="42" y="780" fill="#4e425f" font-size="18">How I supported the work</text>
+<text x="42" y="810" fill="#6b6470" font-size="18">Meetings &amp; stand-ups · Task planning · Presentation rehearsals</text>
+</g></svg>
