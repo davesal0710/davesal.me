@@ -166,7 +166,7 @@ const cases={
     "image": "assets/dvzz-storefront.png",
     "gallery": [
       {
-        "src": "assets/dvzz-manufacturing-proof.jpg",
+        "src": "assets/dvzz-manufacturing-proof-optimized.jpg",
         "alt": "Supplier proof showing front and back pin views, dimensions, colors, finishes, and clutch locations",
         "caption": "GS-JJ manufacturing proof showing the dimensions, colors, finishes, and attachment details reviewed during supplier coordination."
       }
