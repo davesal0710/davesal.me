@@ -45,80 +45,83 @@ const cases={
     ]
   },
   "gym": {
-    "kicker": "TETSUGYM · AI-ASSISTED PRODUCT DEVELOPMENT",
-    "title": "From a pasted workout plan to a structured training routine.",
-    "summary": "TetsuGym is my personal workout-logging project, developed with an AI builder. I wanted to combine the flexibility of a routine written in notes with structured workout logging. I define the requirements, direct implementation changes, and test the app through my own use.",
+    "kicker": "TETSUGYM · MOBILE PRODUCT DEVELOPMENT",
+    "title": "Turning workout notes into a mobile training workflow.",
+    "summary": "TetsuGym grew out of my own training: I wanted the flexibility of notes with the structure of a workout tracker. Using an AI builder, I shaped a mobile web app around routine setup, set logging, rest timing, and progress. I define the requirements, direct implementation changes, and test the experience through my own use.",
     "items": [
-      [
-        "My contribution",
-        "Product scope, requirements, feature priorities, feedback to the AI builder, hands-on testing, and iterative revisions."
-      ],
-      [
-        "Where AI fits",
-        "I use AI for development and routine intake. Gemini organizes pasted workout text into structured fields for the user to review."
-      ],
-      [
-        "Product decision",
-        "I made working weight and training volume the focus of the progress view, reducing estimated one-rep max to a smaller, secondary feature."
-      ],
-      [
-        "Current status",
-        "Working personal app, with ongoing feature and interface refinement."
-      ]
+        [
+            "My contribution",
+            "Product scope, user stories, acceptance criteria, feature priorities, hands-on testing, and feedback to the AI builder."
+        ],
+        [
+            "Core workflow",
+            "Choose a template, paste a routine, or build a custom split. Review the plan, log sets, and track working weight and volume."
+        ],
+        [
+            "Key product decision",
+            "Remove estimated 1RM from the progress interface and focus on working loads, logged reps, and practical weight increments."
+        ],
+        [
+            "Current status",
+            "Working personal project with ongoing mobile refinement. Built with React, TypeScript, an Express AI endpoint, and local-first PWA storage."
+        ]
     ],
     "sections": [
-      [
-        "Start with a practical problem",
-        "Moving a workout routine from notes or a message into a tracker can mean entering the exercises, sets, reps, and rest periods again. I wanted to reduce that setup work and keep workout logging straightforward."
-      ],
-      [
-        "Use AI to structure the routine",
-        "I defined intake requirements for multi-day plans, exercise names, sets, rep targets, weight notes, and rest times. The review flow lets users inspect the extracted routine, edit details, and reassign days before saving."
-      ],
-      [
-        "Prioritize the training workflow",
-        "The requirements cover calendar and session tracking, set completion, adjustable rest timers, and JSON backup and restore. I also specified clear error handling for failed AI imports so users know when a routine needs attention."
-      ],
-      [
-        "Refine the progress hierarchy",
-        "Estimated one-rep max initially had a prominent place in the progress view. I changed the hierarchy to emphasize working weight and training volume, keeping 1RM as a much smaller secondary metric. That made the main view better reflect how I wanted to track everyday training."
-      ],
-      [
-        "Plan for connectivity and data ownership",
-        "The design separates local workout tracking from AI imports that need a network connection. Local storage, PWA caching, and JSON backup support continuity during training and give users a way to keep their own copy of their logs."
-      ],
-      [
-        "Direct and review AI-assisted development",
-        "I set the feature priorities, describe the intended behavior, use the app, and turn issues into specific revision requests. The project has helped me connect requirements thinking with hands-on testing and product decisions."
-      ]
+        [
+            "Reduce the work before the workout",
+            "A routine can arrive as a note or message with rep ranges, decimal weights, and machine-specific instructions. Re-entering every detail creates extra setup work. I used that problem to define a flow from unstructured text to an editable weekly plan, followed by straightforward set logging."
+        ],
+        [
+            "Make onboarding match the starting point",
+            "I simplified the initial setup to language and name, then ordered the creation paths as Templates, Paste Text, and Custom. I removed the fitness-goal question and the routine-replacement warning for new users. When custom day inputs overlapped on small screens, I turned the issue into a specific layout revision. English and Spanish interfaces support the same workflow."
+        ],
+        [
+            "Turn AI intake into a reviewable handoff",
+            "The intake requirements cover days, exercises, sets, rep ranges, working weights, rest times, and exercise notes. Gemini structures pasted text, and the review flow lets users edit fields and reassign days before saving. I specified clear import errors rather than silently substituting a generic routine. The AI request goes through the backend so API credentials stay out of the browser."
+        ],
+        [
+            "Choose progress metrics that fit the training",
+            "The updated progress view uses maximum working weight and total session volume. I asked for projections of future working loads in 5 lb steps instead of estimated one-rep max. The model uses logged weights, set-by-set reps, training frequency, and observed weight changes across 1, 3, 6, and 12-month horizons. These are planning estimates that assume consistent training, nutrition, and recovery."
+        ],
+        [
+            "Translate an example into acceptance criteria",
+            "My example was four dumbbell bench sets at 40 lb: first 12, 10, 8, 8 reps, then 12, 12, 12, 12. I used it to clarify that reaching the rep ceiling across all sets should indicate readiness for the next 5 lb step. I also asked the interface to show which logs informed the estimate and to consolidate the projection assumptions into one clear note."
+        ],
+        [
+            "Plan for the gym environment and data ownership",
+            "Local workout storage and PWA caching support training after the app has loaded, while AI imports require a connection. Set completion connects to an adjustable rest timer, with sound and notification support. JSON backup and restore give users a portable copy of their plans and logs; spreadsheet exports and session recaps extend that workflow."
+        ],
+        [
+            "Turn usability issues into concrete revisions",
+            "When Reset All did not respond, I directed a change from a browser confirmation popup to a two-step in-app confirmation. The confirmed reset clears saved data and returns to initial setup. The documented revisions also cover mobile input sizing, onboarding order, projection transparency, and duplicate notices. Each issue became a defined behavior to check in the next iteration."
+        ],
+        [
+            "Define how to evaluate the next iteration",
+            "The project docs propose time to the first logged set, successful routine imports, weekly routine completion, and the difference between projected and actual working weights as evaluation measures. I would use these to assess setup friction and refine the model over time. The main takeaway is connecting a practical user problem to requirements, implementation feedback, and a clear review process."
+        ]
     ],
     "screens": [
-      {
-        "src": "assets/tetsu-ai-import.png",
-        "title": "AI routine intake",
-        "alt": "Paste Text onboarding with a workout routine and an Organize Routine button referencing Gemini AI.",
-        "caption": "Paste a routine into the onboarding flow and organize it with Gemini AI."
-      },
-      {
-        "src": "assets/tetsu-calendar.png",
-        "title": "Plan the training week",
-        "alt": "Monthly calendar showing a scheduled push, pull, and legs routine.",
-        "caption": "A monthly view of the training split, with a starting point for each workout."
-      },
-      {
-        "src": "assets/tetsu-workout-timer.png",
-        "title": "Log sets and manage rest",
-        "alt": "Lat pulldown with three completed sets and an active rest timer.",
-        "caption": "Completed sets, exercise notes, and the rest timer in the logging flow."
-      },
-      {
-        "src": "assets/tetsu-progress.png",
-        "title": "Refine the progress view",
-        "alt": "Progress view showing one logged session, working load, a volume tab, and estimated one-rep max.",
-        "caption": "Earlier progress layout. I later reduced the prominence of estimated 1RM so working weight and volume lead the view."
-      }
-    ]
-  },
+        {
+            "src": "assets/tetsu-ai-import.png",
+            "title": "AI routine intake",
+            "alt": "Paste Text onboarding with a workout routine and an Organize Routine button referencing Gemini AI.",
+            "caption": "Earlier app capture. Paste a routine into the onboarding flow and organize it with Gemini AI."
+        },
+        {
+            "src": "assets/tetsu-calendar.png",
+            "title": "Plan the training week",
+            "alt": "Monthly calendar showing a scheduled push, pull, and legs routine.",
+            "caption": "Earlier app capture. A monthly view of the training split, with a starting point for each workout."
+        },
+        {
+            "src": "assets/tetsu-workout-timer.png",
+            "title": "Log sets and manage rest",
+            "alt": "Lat pulldown with three completed sets and an active rest timer.",
+            "caption": "Earlier app capture. Completed sets, exercise notes, and the rest timer in the logging flow."
+        }
+    ],
+    "screenIntro": "Earlier mobile app captures, retained to show the intake and logging flow. The updated progress decisions are explained below."
+},
   "pins": {
     "kicker": "DVZZPINS · BUSINESS OWNERSHIP & SUPPLIER COORDINATION",
     "title": "Turning product ideas into manufacturing requirements.",
@@ -245,9 +248,9 @@ const cases={
   }
 };
 
-const renderScreens = screens => screens ? `<section class="case-screens" aria-label="TetsuGym app screenshots"><h3>Inside the app</h3><p>Actual mobile app captures. Select any screen to inspect it at full size.</p><div class="case-screen-grid">${screens.map(g=>`<figure><h4>${g.title}</h4><a href="${g.src}" target="_blank" rel="noopener" aria-label="Open full-size screenshot: ${g.title}"><img src="${g.src}" alt="${g.alt}" width="1206" height="2622" loading="lazy"></a><figcaption>${g.caption} <a href="${g.src}" target="_blank" rel="noopener">Open full size ↗</a></figcaption></figure>`).join('')}</div></section>` : '';
+const renderScreens = (screens, intro) => screens ? `<section class="case-screens" aria-label="TetsuGym app screenshots"><h3>Inside the app</h3><p>${intro || "Actual mobile app captures. Select any screen to inspect it at full size."}</p><div class="case-screen-grid">${screens.map(g=>`<figure><h4>${g.title}</h4><a href="${g.src}" target="_blank" rel="noopener" aria-label="Open full-size screenshot: ${g.title}"><img src="${g.src}" alt="${g.alt}" width="1206" height="2622" loading="lazy"></a><figcaption>${g.caption} <a href="${g.src}" target="_blank" rel="noopener">Open full size ↗</a></figcaption></figure>`).join('')}</div></section>` : '';
 const modal=document.querySelector('#case-modal'),content=document.querySelector('#modal-content');
-document.querySelectorAll('[data-modal]').forEach(b=>b.addEventListener('click',()=>{const c=cases[b.dataset.modal];content.innerHTML=`<article class="modal-inner"><div class="modal-kicker">${c.kicker}</div><h2 id="case-title">${c.title}</h2><p>${c.summary}</p><div class="case-grid">${c.items.map(x=>`<div><span>${x[0]}</span><p>${x[1]}</p></div>`).join('')}</div>${c.image?`<figure class="case-figure"><img src="${c.image}" alt="Archived DvzzPins storefront showing product listings and branded backing cards"><figcaption>Archived storefront from the supplied business records.</figcaption></figure>`:""}${renderScreens(c.screens)}${(c.sections||[]).map(x=>`<section class="case-section"><h3>${x[0]}</h3><p>${x[1]}</p></section>`).join("")}${(c.gallery||[]).map(g=>`<figure class="case-figure evidence-figure"><a href="${g.src}" target="_blank" rel="noopener" aria-label="Open image at full size: ${g.alt}"><img src="${g.src}" alt="${g.alt}" loading="lazy"></a><figcaption>${g.caption} <a href="${g.src}" target="_blank" rel="noopener">Open full size ↗</a></figcaption></figure>`).join("")}${c.note?`<p class="case-note">${c.note}</p>`:""}</article>`;modal.showModal();modal.scrollTop=0;document.body.classList.add("case-open")}));
+document.querySelectorAll('[data-modal]').forEach(b=>b.addEventListener('click',()=>{const c=cases[b.dataset.modal];content.innerHTML=`<article class="modal-inner"><div class="modal-kicker">${c.kicker}</div><h2 id="case-title">${c.title}</h2><p>${c.summary}</p><div class="case-grid">${c.items.map(x=>`<div><span>${x[0]}</span><p>${x[1]}</p></div>`).join('')}</div>${c.image?`<figure class="case-figure"><img src="${c.image}" alt="Archived DvzzPins storefront showing product listings and branded backing cards"><figcaption>Archived storefront from the supplied business records.</figcaption></figure>`:""}${renderScreens(c.screens, c.screenIntro)}${(c.sections||[]).map(x=>`<section class="case-section"><h3>${x[0]}</h3><p>${x[1]}</p></section>`).join("")}${(c.gallery||[]).map(g=>`<figure class="case-figure evidence-figure"><a href="${g.src}" target="_blank" rel="noopener" aria-label="Open image at full size: ${g.alt}"><img src="${g.src}" alt="${g.alt}" loading="lazy"></a><figcaption>${g.caption} <a href="${g.src}" target="_blank" rel="noopener">Open full size ↗</a></figcaption></figure>`).join("")}${c.note?`<p class="case-note">${c.note}</p>`:""}</article>`;modal.showModal();modal.scrollTop=0;document.body.classList.add("case-open")}));
 document.querySelector('.close').addEventListener('click',()=>modal.close());modal.addEventListener('click',e=>{if(e.target===modal)modal.close()});
 
 modal.addEventListener("close",()=>document.body.classList.remove("case-open"));
