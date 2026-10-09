@@ -43,3 +43,6 @@ section[id]{scroll-margin-top:95px}.skills-section{padding-top:65px}.skills-sect
   .project h2{margin:24px 0 18px}
   .project .text-button{margin-top:24px}
 }
+
+/* Case studies remain accessible when scripting is unavailable. */
+.case-page{max-width:870px;margin:120px auto 80px;padding:0 28px}.case-back{display:inline-block;padding:12px 0;color:var(--paper);font:13px var(--mono)}.case-page .modal-inner{padding:40px 0}.case-page h1{max-width:760px;margin:24px 0;font-size:clamp(38px,6vw,64px);line-height:1.05;letter-spacing:-.045em}.case-page .case-section h2{font-size:23px;line-height:1.25;margin-bottom:12px;letter-spacing:-.025em;font-weight:600}.case-page .case-screens img{width:100%;height:auto}.case-page .text-button{margin-top:10px}@media(max-width:520px){.case-page{padding:0 24px;margin-top:110px}}
